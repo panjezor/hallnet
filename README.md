@@ -20,7 +20,11 @@ For some cases, there will be jQuery with Bootstrap available.
 EXPLICITLY SET ENV in nuxt.config.js
 
 - `php artisan migrate`
+- give the web engine user ownership of the folder (nginx - chown www-data hallnet)
 - `npm install`
+- `npm run build` - if this results in an error - change '@import '~@fortawesome/fontawesome-svg-core/styles.css';
+' into '@import '@fortawesome/fontawesome-svg-core/styles.css', or vice versa.
+'
 - `php artisan passport:install` (with --uuids if you want them)
 - `php artisan optimize:full`
 
