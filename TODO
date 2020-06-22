@@ -1,0 +1,20 @@
+Task:
+Write a simple URL shortener service. The site should allow a user to enter a valid URL and give back a
+shortened version using a human readable word or words as a substitute for their URL. For example,
+running on localhost, this might shorten https://www.hallnet.co.uk/blog/41-php-developers-wanted to
+http://localhost/aardvark.
+
+
+1. cURL https://www.eff.org/files/2016/09/08/eff_short_wordlist_2_0.txt for keywords - done
+2. shorten duplicate URLs as if they were unique (original is not primary or unique) - ??
+3. description in row for a link - done
+4. counter on use - done
+5. main page with 10 most recent urls (need created_at) - needs doing
+
+
+
+Personal Objectives:
+- design database to hold links and information - done
+- get the shortword file and seed the db with it - done, used API call in HomeController and ShortwordFactory.
+- create a redirect function on the controller or middleware. - RedirectIfLinkActive middleware deployed to check the database for links.
+- mock GUI with logo and colour scheme (is this a frontend job? ;__; )
