@@ -12,8 +12,8 @@ module.exports = {
   srcDir: __dirname,
 
   env: {
-    apiUrl: "https://wirtualny-broker.com/api", // could be swapped over to string exchange(https instead of http) process.env.API_URL || ... APP_URL+/api
-    appName: "Hallnet URL Shortener",
+    apiUrl: 'https://wirtualny-broker.com/api', // could be swapped over to string exchange(https instead of http) process.env.API_URL || ... APP_URL+/api
+    appName: 'Hallnet URL Shortener',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
@@ -63,7 +63,7 @@ module.exports = {
     generate: {
       done (generator) {
         // Copy dist files to public/_nuxt
-        //uncomment if testing on 3001 (switch mode to 'spa' or 'ssr' depending on needs)
+        // uncomment if testing on 3001 (switch mode to 'spa' or 'ssr' depending on needs)
         if (generator.nuxt.options.dev === false && generator.nuxt.options.mode === 'spa') {
           const publicDir = join(generator.nuxt.options.rootDir, 'public', '_nuxt')
           removeSync(publicDir)
