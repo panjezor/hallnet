@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('{path}', 'HomeController@home')->where('path', '(.*)');
+Route::get('{path}', 'HomeController@home')
+    ->where('path', '(.*)')
+    ->middleware(\App\Http\Middleware\RedirectIfLinkActive::class);
