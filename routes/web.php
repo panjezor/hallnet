@@ -11,6 +11,8 @@
 |
 */
 
+use \Illuminate\Support\Facades\Route;
+
 Route::get('{path}', 'HomeController@home')
-    ->where('path', '(.*)')
-    ->middleware(\App\Http\Middleware\RedirectIfLinkActive::class);
+    ->where('path', '(.*)');
+

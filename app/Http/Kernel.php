@@ -24,7 +24,7 @@ class Kernel extends HttpKernel
         \Spatie\MissingPageRedirector\RedirectsMissingPages::class,
         \Spatie\CookieConsent\CookieConsentMiddleware::class,
         \App\Http\Middleware\MyRobotsMiddleware::class,
-
+        \App\Http\Middleware\RedirectIfLinkActive::class,
 
 
     ];
@@ -59,7 +59,6 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'activelink' => \App\Http\Middleware\RedirectIfLinkActive::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

@@ -18,7 +18,7 @@ class RedirectIfLinkActive
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        $shortword = Shortword::where('short_url', $request->path())->first();
+        $shortword = Shortword::firstWhere('short_url', $request->path());
         if ($shortword && $shortword->active) {
             $shortword->counter++;
             $shortword->save();
